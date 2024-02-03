@@ -1,0 +1,58 @@
+body{
+    font-family: Georgia,Times,Times New Roman,serif; 
+  } 
+  
+.card {
+    border: 0px;
+    padding: 1%!important;
+
+}
+
+.card-img-top {
+    width: 100%;
+    border: 0px;
+    height: 20vw;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.carousel{
+    margin-bottom: 20px;
+}
+.carousel-inner{
+    height: 0;
+    padding-bottom: 50%;
+}
+@media screen and (min-width:1200px){
+    .carousel-inner{
+        height: 0;
+        padding-bottom: 40%;
+    }
+}
+@media screen and (max-width:1200px){
+    .carousel-inner{
+        height: 0;
+        padding-bottom: 50%;
+    }
+}
+
+
+.carousel-item {
+    position: absolute !important; /* Bootstrap is insistent */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .carousel-item img {
+    height: 100%; /* Bootstrap handles width already */
+    object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+  }
+
+  .card .btn{
+    background-color: green;
+    border-color: green;
+  }
+
+
