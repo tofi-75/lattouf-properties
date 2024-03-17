@@ -56,20 +56,17 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li> -->
-          <!-- <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li> -->
         </ul>
-        <form class="d-flex" role="search">
+        <!-- <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        </form> -->
       </div>
     </div>
   </nav>
   <div class="container-fluid main-content">
     <section id="carousel">
-      <div id="carouselExample" class="carousel slide row">
+      <div id="carouselExample" class="carousel slide row" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="..\img\t3_sunshine_placeholder.jpg" class="d-block w-100" alt="...">
@@ -94,13 +91,13 @@
     <section id="about-us">
       <h1>About Us</h1>
       <p>
-        Welcome to <b>Lattouf Properties Ltd</b>, your gateway to a comfortable home in Cyprus. Established in 2021, we specialize in helping Lebanese citizens find their ideal overseas property, seamlessly facilitating the process of buying, selling, and applying for residency.
+        Welcome to <b>Lattouf Properties Ltd</b>, your gateway to a comfortable home in Cyprus. Established in 2017, we specialize in helping interested clients find their ideal overseas property, seamlessly facilitating the process of buying, selling, and applying for residency.
       </p>
       <p>
         <h6>Why Lattouf Properties?</h6>
 <ul>
   <li>
-    <b>Expert Guidance:</b> With deep roots in both Lebanon and Cyprus, we offer expert guidance tailored to the unique needs of Lebanese citizens looking to invest in Cyprus.
+    <b>Expert Guidance:</b>With an experience of over 10 years in the Cypriot market, we offer expert guidance tailored to the unique needs of Lebanese citizens looking to invest overseas.
   </li>
   <li>
     <b>Tailored Solutions:</b> Our curated portfolio features properties that promise comfort, luxury, and convenience, ensuring you find the right home for you.
@@ -113,14 +110,16 @@
     </section>
     <section id="our-services">
       <h1>Our Projects</h1>
-      <div id="cards-container" class="d-flex flex-row row">
+      <div id="cards-container" class="d-wrap flex-row row justify-content-center">
         <div class="card p-2 col-sm" style="width: 18rem;">
           <img src="..\img\t3_sunshine_placeholder.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">T3 Sunshine</h5>
+            <h5 class="card-title">T3 Sunray</h5>
             <p class="card-text">A walking distance from the new Marina, and a view to the sea make this property a great
               place to live.</p>
-            <a href="./properties/sunwave-property.html" class="btn btn-primary">More info</a>
+              <div class="d-flex justify-content-center">
+                <a href="./properties/sunray-property.html" class="btn btn-primary center">More info</a>
+              </div>
           </div>
         </div>
         <div class="card p-2 col-sm" style="width: 18rem;">
@@ -128,7 +127,9 @@
           <div class="card-body">
             <h5 class="card-title">T3 Sunlight</h5>
             <p class="card-text">This apartment ma suit the calmer people who are looking to live in Larnace</p>
-            <a href="./properties/sunlight-property.html" class="btn btn-primary">More info</a>
+            <div class="d-flex justify-content-center">
+              <a href="./properties/sunlight-property.html" class="btn btn-primary center">More info</a>
+            </div>          
           </div>
         </div>
         <div class="card p-2 col-sm" style="width: 18rem;">
@@ -136,13 +137,30 @@
           <div class="card-body">
             <h5 class="card-title">T3 Sunwave</h5>
             <p class="card-text">One of our biggest projects yet!</p>
-            <a href="./properties/sunwave-property.html" class="btn btn-primary">More info</a>
+            <div class="d-flex justify-content-center">
+              <a href="./properties/sunshine-property.html" class="btn btn-primary center">More info</a>
+            </div>          
           </div>
         </div>
       </div>
     </section>
     <section id="reviews">
       <h1>Reviews</h1>
+      <div class="d-flex row">
+        <div class="review-card col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <div class="review-pic">
+            <i class="bi bi-person-circle" ></i>
+          </div>
+          <div class="review-content">
+            <div class="reviewer-name">
+              <h6>Abou l Abed</h6>
+            </div>
+            <div class="review-text">
+              <p>Bought it last year. Perfect spot, great vibe, absolutely recommend!</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="contact-form" >
       <h1>Contact Us</h1>
@@ -154,19 +172,19 @@
         <div class="container py-4 col-md-8">
 
         <!-- Bootstrap 5 starter form -->
-        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+        <form id="contactForm" action="send_email.php" method="post" data-sb-form-api-token="API_TOKEN">
 
           <!-- Name input -->
           <div class="mb-3">
             <label class="form-label" for="name">Name</label>
-            <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+            <input class="form-control" id="name" name="name" type="text" placeholder="Name" data-sb-validations="required" />
             <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
           </div>
 
           <!-- Email address input -->
           <div class="mb-3">
             <label class="form-label" for="emailAddress">Email Address</label>
-            <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
+            <input class="form-control" id="emailAddress" name="email" type="email" placeholder="Email Address" data-sb-validations="required, email" />
             <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
             <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
           </div>
@@ -174,7 +192,7 @@
           <!-- Message input -->
           <div class="mb-3">
             <label class="form-label" for="message">Message</label>
-            <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+            <textarea class="form-control" id="message" name="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
             <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
           </div>
 
@@ -190,7 +208,7 @@
 
           <!-- Form submit button -->
           <div class="d-grid">
-            <button class="btn btn-lg disabled" id="submitButton" type="submit">Submit</button><!--fix button css-->
+            <button class="btn btn-lg" id="submitButton" type="submit">Submit</button><!--fix button css-->
           </div>
 
         </form>
@@ -199,7 +217,7 @@
       </div>
       
     </section>
- 
+    <a class="floating-whatsapp-button" href="https://wa.me/9613217801"><i class="bi bi-whatsapp d-block contain"></i></a>
   </div>
   </div>
   <div class="container footer-container">
@@ -220,12 +238,9 @@
       </ul>
     </footer>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
