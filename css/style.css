@@ -5,6 +5,7 @@
     --secondary-background-color: #ffffff;
     --text-color: #343a40; /* Example text color */
     --disabled-color: #777777;
+
 }
 
 body {
@@ -14,7 +15,6 @@ body {
     color:var(--primary-color);
     background-color: var(--background-color);
 }
-
 
 
 h1 {
@@ -68,7 +68,6 @@ section{
 
     background-color: var(--primary-color);
 }
-
 
 
 .btn-outline-success{
