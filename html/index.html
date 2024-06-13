@@ -131,7 +131,7 @@
     </section>
     <section id="our-services">
       <h1>Our Projects</h1>
-      <div id="cards-container" class="d-wrap flex-row row justify-content-center">
+      <div id="cards-container" class="d-wrap flex-row row justify-content-center" onload="console.log('ssssssomething ain\'t right')">
         <div class="card p-2 col-sm" style="width: 18rem;">
           <img src="../img/properties/t3-sunray-front-1.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -142,7 +142,7 @@
               </div>
           </div>
         </div>
-        <div class="card p-2 col-sm" style="width: 18rem;">
+        <!-- <div class="card p-2 col-sm" style="width: 18rem;">
           <img src="../img/properties/t3-sunlight-front-bottom-1.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">T3 Sunlight</h5>
@@ -151,7 +151,7 @@
               <a href="./properties/sunlight-property.html" class="btn btn-primary center">More info</a>
             </div>          
           </div>
-        </div>
+        </div> -->
         <div class="card p-2 col-sm" style="width: 18rem;">
           <img src="../img/properties/t3-sunwave-front-side-2.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -263,6 +263,8 @@
          emailjs.init('4ThDXlQX85_DosXd_'); // Replace 'your-user-ID' with your actual EmailJS user ID
       })();
    </script>
+   <script src="../js/card-loader.js"></script>
+   <!-- <script src="../js/startup.js"></script> -->
    <script src="../js/email-handler.js"></script>
 </body>
 
